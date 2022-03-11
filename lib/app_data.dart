@@ -3,7 +3,7 @@
 import 'models/category.dart';
 import 'models/trips.dart';
 
-const Categories_data = [
+const categories_data = [
   Category(
     id: 'c1',
     title: 'جبال',
@@ -42,7 +42,7 @@ const Categories_data = [
   ),
 ];
 
-const Trips_data = [
+const trips_data = [
   Trip(
     id: 'm1',
     categories: [
