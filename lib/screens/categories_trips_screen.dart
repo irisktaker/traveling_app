@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:traveling_app/app_data.dart';
+import 'package:traveling_app/widgets/trip_item.dart';
 
 class CategoriesTripsScreen extends StatelessWidget {
   static const screenRoute = '/category-trips';
@@ -25,7 +26,13 @@ class CategoriesTripsScreen extends StatelessWidget {
       ),
       body: ListView.builder(
         itemBuilder: (ctx, i) {
-          return Text(filterTrips[i].title);
+          return TripItem(
+            title: filterTrips[i].title,
+            imageUrl: filterTrips[i].imageUrl,
+            duration: filterTrips[i].duration,
+            tripType: filterTrips[i].tripType,
+            season: filterTrips[i].season,
+          );
         },
         itemCount: filterTrips.length,
       ),
